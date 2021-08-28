@@ -93,6 +93,7 @@ h3 {
     color: IndianRed;
 }
 
+/* Hero section */
 .hero {
     height: 70vh;
     /* background-color: pink ;  Esto es el color de fonto que tenia antes de poner el svg */
@@ -184,27 +185,36 @@ h3 {
     bottom: 100px;
 }
 
-/* Main Section */
-.main-cataloge-container {
+/* Cataloge Section */
+.cataloge-container {
     background-color: #eeb4aa;
     height: 100vh;
     padding: 10rem;
 }
 
-.main-cataloge-tittle {
+.cataloge-tittle {
+    font-size: 3rem;
+    padding-bottom: 2rem;
     color: cornflowerblue;
 }
 
-.main-cataloge-card{
+.cataloge-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cataloge-card{
     border: red 3px solid; 
-    border-radius: 20px;
-    width: 300px;
+    border-radius: 10px;
+    width: 25%;
     height: 300px;
     overflow: hidden;
+    margin: 1rem;
 }
 
 .cataloge-card-img {
-    border-radius: 20px 20px 5px 5px;
+    
     object-fit: contain;
 }
 
