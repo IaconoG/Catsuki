@@ -1,0 +1,254 @@
+/* rem: El rem es una unidad de medida que es proporcional a la fuente que definimos como base en el body */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* { /* Selecciona todos los elementos, dando stylo a todo al mismo tiempo */
+    margin: 0;
+}
+*::selection {
+    background: #f09a00;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+header {
+    background: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Necesita que le estipulemos el anocho y alto */ /* Position fixed y absoluted pasan a pertencer a otra capa */
+    width: 100%;
+    height: 80px;
+    top: 0; /* Para que quede cablado arriba */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding-right: 40px;
+}
+
+ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+ul li:hover {
+    text-decoration: underline;
+    transform: scale(1.5);
+}
+
+a {
+    text-decoration: none;
+    color: rosybrown;
+}
+
+header img {
+    height: 60px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+main { 
+    padding-top: 80px;
+    flex: 1; /* Estirate todo lo posible */
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* height: 200vh; /* Viewport heigth */
+    color: #db4950;
+    font-family: 'Roboto Slab';
+}
+
+h1 {
+    font-size: 4rem; /* 16px * 1rem = 16px */
+}
+
+h1:hover {
+    color: #f09a00;
+}
+
+h1::after {
+    content: ' \2665'' ';
+    color: #db4950;
+}
+
+h3 {
+    color: IndianRed;
+}
+
+.hero {
+    height: 70vh;
+    /* background-color: pink ;  Esto es el color de fonto que tenia antes de poner el svg */
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 10rem;
+    flex-wrap: wrap;
+    
+    /* svg  backgrounds */
+    background-color: #330033;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 90 90'%3E%3Ccircle fill='%2306B' cx='45' cy='45' r='10'/%3E%3Cg fill='%23800' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='10'/%3E%3Ccircle cx='90' cy='90' r='10'/%3E%3Ccircle cx='90' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+    margin-right: 20rem;
+}
+
+.hero-content h3 {
+    color:cornflowerblue;
+}
+
+.hero-img {
+    width: 25%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 2px rgba(200, 192, 203, 0.8);
+    animation: zoom-in-zoom-out 2.5s alternate infinite;
+}
+
+/* { Animations } */
+    @keyframes zoom-in-zoom-out {
+        0% {
+            transform: scale(100%);
+        }
+        100% {
+            transform: scale(104%);
+        }
+    } 
+    .zoom-in-hover:hover {
+        transform: scale(1.05);
+        transition: 0.5s ease-in-out;
+    }
+    
+.button { /* solo estilo no posicionamiento */
+    min-width: 30px;
+    max-width: 200px;
+    font-family: 'Roboto Slab';
+    color: #fafbfd;
+    background-color: #db4950;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+
+}
+
+.buy-button { /* Posicionamiento */
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    animation: shake 2s alternate infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+/* { Animations } */
+    @keyframes shake {
+        0% {
+            transform: translateX(-5px);
+        }
+        10%{ 
+            transform: translateX(5px);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        50% {
+            transform: translateX(5px);
+        }
+        100% {
+            transform: translateX(5px);
+        }
+    }
+
+
+.suggerences-button {
+    position: fixed;
+    right: 32px;
+    bottom: 100px;
+}
+
+/* Main Section */
+.main-cataloge-container {
+    background-color: #eeb4aa;
+    height: 100vh;
+    padding: 10rem;
+}
+
+.main-cataloge-tittle {
+    color: cornflowerblue;
+}
+
+.main-cataloge-card{
+    border: red 3px solid; 
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cataloge-card-img {
+    border-radius: 20px 20px 5px 5px;
+    object-fit: contain;
+}
+
+/* Contact Section */
+.contact-container {
+    min-height: 20vh;
+    background-color: #fef2d8;
+    padding: 10rem; /* !!!!!!! Intentar alinear al centro las mierdas de contactos !!!!!!!!!*/
+}
+
+.contact-tittle{
+
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+input:focus-within {
+    color: black;
+  }
+.contact-container input, textarea{
+    padding-left: 1em;
+    height: 5vh;
+    width: 80vh;
+    margin-bottom: 3vh;
+    border: none;
+    font-size: 1.3em;
+    box-shadow: 2px 2px #f0535d;
+}
+
+.contact-container textarea{
+    height: 25vh;
+    width: 80vh;
+    font-size: 1.4em;
+}
+
+.contact-container input:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0px 0px 0px 2px #f0535d;
+}
+
+footer {
+    background-color: #fef2d8;
+    display: flex;
+    flex-direction: column;
+}
