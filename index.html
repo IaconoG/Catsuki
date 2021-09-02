@@ -31,34 +31,38 @@
             <section class="cataloge-container">
                 <h2 class="cataloge-tittle">Nuestro catologo UPS</h2>
                 <div class="cataloge-content">
-                    <div class="cataloge-card">
-                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" width="100%"  />
-                        
+                    <p id="cataloge-loader">Cargando...</p>
+                    <!-- This elements were creted in the first clases, but now we create these elements with JS
+                        <div class="cataloge-card">
+                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" />
                     </div>
                     <div class="cataloge-card">
-                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" width="100%"  />
+                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" />
                     </div>
                     <div class="cataloge-card">
-                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" width="100%"  />
+                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" />
                     </div>
                     <div class="cataloge-card">
-                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" width="100%"  />
+                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" />
                     </div>
                     <div class="cataloge-card">
-                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" width="100%"  />
-                    </div>
+                        <img class="cataloge-card-img" src="https://cataas.com/cat" alt="Catsuki-hero" />
+                    </div> -->
                 </div>
+                <button class="button" id="add-cat-buttom">Agregar Gato</button>
             </section>
 
             <section class="contact-container">
                 <h2 class="contact-tittle">Contactate pa</h2>
-                <form onsubmit="">
-                    <input type="text" placeholder="Nombre"></input>
-                    <input type="email" placeholder="Email"></input>
-                    <input type="number" placeholder="Celular"></input>
-                    <textarea placeholder="Mensaje"></textarea>
-                    <button class="button" type="submit">Enviar</button>
-                </form>
+                <div class="form-contact-container">
+                    <form onsubmit="">
+                        <input type="text" placeholder="Name"></input>
+                        <input type="email" placeholder="Email"></input>
+                        <input type="number" placeholder="Phone"></input>
+                        <textarea placeholder="Here you can leave a message: 3"></textarea>
+                        <button class="button" type="submit">Enviar</button>
+                    </form>
+                </div>
             </section>
 
             <button class="button buy-button zoom-in-hover" id="buy-now">Comprar ahora</button>

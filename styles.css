@@ -9,6 +9,16 @@
     background: #f09a00;
 }
 
+/* Reutilizacion */
+
+center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Estilos **/ 
+
 body {
     height: 100vh;
     display: flex;
@@ -149,7 +159,10 @@ h3 {
     border: none;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     font-size: 20px;
+}
 
+.button:hover {
+    cursor: pointer;
 }
 
 .buy-button { /* Posicionamiento */
@@ -178,12 +191,13 @@ h3 {
         }
     }
 
-
 .suggerences-button {
     position: fixed;
     right: 32px;
     bottom: 100px;
 }
+
+
 
 /* Cataloge Section */
 .cataloge-container {
@@ -202,6 +216,7 @@ h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 5rem;
 }
 
 .cataloge-card{
@@ -214,32 +229,37 @@ h3 {
 }
 
 .cataloge-card-img {
-    
+    width: 100%;
     object-fit: contain;
 }
 
 /* Contact Section */
 .contact-container {
-    min-height: 20vh;
     background-color: #fef2d8;
-    padding: 10rem; /* !!!!!!! Intentar alinear al centro las mierdas de contactos !!!!!!!!!*/
+    padding: 5rem; /* !!!!!!! Intentar alinear al centro las mierdas de contactos !!!!!!!!!*/
 }
 
 .contact-tittle{
     color: #db4950;
+    padding-bottom: 3vh;
+}
+
+.form-contact-container > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: auto;
+    min-width: 200px;
 }
 
 .contact-container form {
-    display: flex;
     flex-direction: column;
 }
-input:focus-within {
-    color: black;
-  }
+
 .contact-container input, textarea{
-    padding-left: 1em;
-    height: 5vh;
-    width: 80vh;
+    background-color: #fafbfd;
+    height: 4.5vh;
+    width: 500px;
     margin-bottom: 3vh;
     border: none;
     font-size: 1.3em;
@@ -247,15 +267,29 @@ input:focus-within {
 }
 
 .contact-container textarea{
-    height: 25vh;
-    width: 80vh;
+    height: 200px;
     font-size: 1.4em;
 }
 
-.contact-container input:focus, textarea:focus {
-        outline: none;
-        box-shadow: 0px 0px 0px 2px #f0535d;
+.contact-container input::placeholder, textarea::placeholder{
+    padding-left: 2vh;
+    color: rosybrown;
+    word-spacing: 0.25em;
+    letter-spacing: 1px;
 }
+
+.contact-container textarea::placeholder{
+    padding-top: 0.5vh ;
+}
+
+
+.contact-container input:focus, textarea:focus { /* Estilo hacer click en anlgun input */
+    outline: none;
+    box-shadow: 0px 0px 0px 2px #f0535d;
+}
+
+
+
 
 footer {
     background-color: #fef2d8;
