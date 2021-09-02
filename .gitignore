@@ -1,0 +1,5 @@
+
+### '.gitignore' # Nos permite ignorar archivos y carpetas las cuales no queremos que sean subidas al repositorio 
+
+# Ignoramos la carpeta de modulos de Tailwindcss
+node_modules

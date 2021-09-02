@@ -1,0 +1,22 @@
+{
+  "name": "catsuki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IaconoG/Catsuki.git"
+  },
+  "author": "Iacono Gianfranco - Coderhood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IaconoG/Catsuki/issues"
+  },
+  "homepage": "https://github.com/IaconoG/Catsuki#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.9"
+  }
+}
