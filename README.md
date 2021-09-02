@@ -8,8 +8,9 @@ En el se utilizaron herramientas tales como:
 <LI>HTML
 <LI>CSS
 <LI>JavaScript
-<UL>Librerias
-<LI>Tailwindcss
+<li>Librerias
+  <UL>
+  <LI>Tailwindcss
 
 <UL>
 <UL></DIV>
