@@ -51,7 +51,7 @@ const CreateCatCard = (cardIndex) => {
     
     const img = document.createElement('img');
     img.classList.add('cataloge-card-img');
-    img.src = "https://cataas.com/cat";
+    img.src = "https://cataas.com/cat/gif";
     img.alt = 'Catsuki';
     //console.log(card.classList);
     console.log(cardsContainer);

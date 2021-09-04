@@ -1,9 +1,16 @@
+/* Inyectamos Tailwinds en el css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* rem: El rem es una unidad de medida que es proporcional a la fuente que definimos como base en el body */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 * { /* Selecciona todos los elementos, dando stylo a todo al mismo tiempo */
     margin: 0;
+    font-family: 'Montserrat';
 }
 *::selection {
     background: #f09a00;
@@ -82,11 +89,11 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     /* height: 200vh; /* Viewport heigth */
-    color: #db4950;
     font-family: 'Roboto Slab';
 }
 
 h1 {
+    color: #db4950;
     font-size: 4rem; /* 16px * 1rem = 16px */
 }
 
@@ -97,10 +104,6 @@ h1:hover {
 h1::after {
     content: ' \2665'' ';
     color: #db4950;
-}
-
-h3 {
-    color: IndianRed;
 }
 
 /* Hero section */
@@ -123,9 +126,8 @@ h3 {
     margin-right: 20rem;
 }
 
-.hero-content h3 {
-    color:cornflowerblue;
-}
+/*.hero-content h3 {
+    color:cornflowerblue; }*/
 
 .hero-img {
     width: 25%;
