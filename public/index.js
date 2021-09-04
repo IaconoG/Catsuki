@@ -51,11 +51,11 @@ const CreateCatCard = (cardIndex) => {
     
     const img = document.createElement('img');
     img.classList.add('cataloge-card-img');
-    img.src = "https://cataas.com"; // Ya no sirve mas la API de cats
-    img.alt = 'Catsuki';
+    // img.src = "https://cataas.com"; // Ya no sirve mas la API de cats
+    // img.alt = 'Catsuki';
     //console.log(card.classList);
-    console.log(cardsContainer);
-    console.log(img);
+    // console.log(cardsContainer);
+    // console.log(img);
 
     // agrego el indicador de indice en la card
     const indexElement = document.createElement('p'); // Crea un elemento HTML especificado por su tagName
@@ -67,7 +67,6 @@ const CreateCatCard = (cardIndex) => {
     card.addEventListener('click', () => {
         card.remove(); // Eliminamos el elemento
     })    
-
 
     cardsContainer.appendChild(card);
     card.appendChild(img);
