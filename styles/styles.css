@@ -1,13 +1,30 @@
+/* Inyectamos Tailwinds en el css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* rem: El rem es una unidad de medida que es proporcional a la fuente que definimos como base en el body */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 * { /* Selecciona todos los elementos, dando stylo a todo al mismo tiempo */
     margin: 0;
+    font-family: 'Montserrat';
 }
 *::selection {
     background: #f09a00;
 }
+
+/* Reutilizacion */
+
+center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Estilos **/ 
 
 body {
     height: 100vh;
@@ -72,11 +89,11 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     /* height: 200vh; /* Viewport heigth */
-    color: #db4950;
     font-family: 'Roboto Slab';
 }
 
 h1 {
+    color: #db4950;
     font-size: 4rem; /* 16px * 1rem = 16px */
 }
 
@@ -87,10 +104,6 @@ h1:hover {
 h1::after {
     content: ' \2665'' ';
     color: #db4950;
-}
-
-h3 {
-    color: IndianRed;
 }
 
 /* Hero section */
@@ -113,9 +126,8 @@ h3 {
     margin-right: 20rem;
 }
 
-.hero-content h3 {
-    color:cornflowerblue;
-}
+/*.hero-content h3 {
+    color:cornflowerblue; }*/
 
 .hero-img {
     width: 25%;
@@ -149,7 +161,10 @@ h3 {
     border: none;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     font-size: 20px;
+}
 
+.button:hover {
+    cursor: pointer;
 }
 
 .buy-button { /* Posicionamiento */
@@ -178,12 +193,13 @@ h3 {
         }
     }
 
-
 .suggerences-button {
     position: fixed;
     right: 32px;
     bottom: 100px;
 }
+
+
 
 /* Cataloge Section */
 .cataloge-container {
@@ -202,6 +218,7 @@ h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 5rem;
 }
 
 .cataloge-card{
@@ -214,32 +231,37 @@ h3 {
 }
 
 .cataloge-card-img {
-    
+    width: 100%;
     object-fit: contain;
 }
 
 /* Contact Section */
 .contact-container {
-    min-height: 20vh;
     background-color: #fef2d8;
-    padding: 10rem; /* !!!!!!! Intentar alinear al centro las mierdas de contactos !!!!!!!!!*/
+    padding: 5rem; /* !!!!!!! Intentar alinear al centro las mierdas de contactos !!!!!!!!!*/
 }
 
 .contact-tittle{
     color: #db4950;
+    padding-bottom: 3vh;
+}
+
+.form-contact-container > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: auto;
+    min-width: 200px;
 }
 
 .contact-container form {
-    display: flex;
     flex-direction: column;
 }
-input:focus-within {
-    color: black;
-  }
+
 .contact-container input, textarea{
-    padding-left: 1em;
-    height: 5vh;
-    width: 80vh;
+    background-color: #fafbfd;
+    height: 4.5vh;
+    width: 500px;
     margin-bottom: 3vh;
     border: none;
     font-size: 1.3em;
@@ -247,15 +269,29 @@ input:focus-within {
 }
 
 .contact-container textarea{
-    height: 25vh;
-    width: 80vh;
+    height: 200px;
     font-size: 1.4em;
 }
 
-.contact-container input:focus, textarea:focus {
-        outline: none;
-        box-shadow: 0px 0px 0px 2px #f0535d;
+.contact-container input::placeholder, textarea::placeholder{
+    padding-left: 2vh;
+    color: rosybrown;
+    word-spacing: 0.25em;
+    letter-spacing: 1px;
 }
+
+.contact-container textarea::placeholder{
+    padding-top: 0.5vh ;
+}
+
+
+.contact-container input:focus, textarea:focus { /* Estilo hacer click en anlgun input */
+    outline: none;
+    box-shadow: 0px 0px 0px 2px #f0535d;
+}
+
+
+
 
 footer {
     background-color: #fef2d8;

@@ -1,0 +1,28 @@
+{
+  "name": "catsuki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Estos son comandos que podemos ejectuar",
+    "dev": "postcss styles/styles.css -o public/styles.css --watch",
+    "prod": "cross-env NODE_ENV=production postcss styles/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IaconoG/Catsuki.git"
+  },
+  "author": "Iacono Gianfranco - Coderhood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IaconoG/Catsuki/issues"
+  },
+  "homepage": "https://github.com/IaconoG/Catsuki#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.9"
+  }
+}
